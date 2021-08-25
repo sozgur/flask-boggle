@@ -1,0 +1,41 @@
+/*Table*/
+
+table,
+td {
+    border: solid 1px black;
+    height: 4em;
+    width: 4em;
+}
+
+#board-table {
+    text-align: center;
+    font-size: 19pt;
+    font-weight: bold;
+    background-color: #fff8dc;
+    border-collapse: collapse;
+    width: 90%;
+    margin-top: 30px;
+}
+
+/*General*/
+.container {
+    margin: 30px 0 0 30px;
+}
+
+#guess-word {
+    margin: 12px;
+}
+
+.msg {
+    margin-top: 45px;
+}
+
+.msg.ok {
+    color: white;
+    background-color: green;
+}
+
+.msg.err {
+    color: white;
+    background-color: red;
+}

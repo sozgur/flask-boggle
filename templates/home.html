@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Boggle{% endblock %}
+{% block content %}
+    <div class="row">
+    <div class="col-8">
+        <div class="row">
+            <div class="col-8">
+                <form id="guess-word">
+                    <label>Guess Word:</label>
+                    <input type="text" id="word">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="col-4">
+                <div class="fs-2 fw-bold" id="timer"></div>
+            </div>  
+        </div> 
+        <table id="board-table">
+            {% for line in board %}
+
+                <tr>
+                    {% for letter in line %}
+                        <td>{{letter}}</td>
+                    {% endfor %}
+     
+                </tr>
+                
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    <div class="col-4">
+        <div class="col-12">
+            <div class="fs-5 fw-bold" id="score-info">Your highscore: {{highscore}} in {{total_played}} plays </div>
+            <div id="score" class="fs-6 fw-bold" ></div>
+        </div>
+
+        <div class="msg"></div>
+
+        <ol class="words">
+            
+        </ol>
+        
+    </div>
+    </div>
+
+
+{% endblock %}
